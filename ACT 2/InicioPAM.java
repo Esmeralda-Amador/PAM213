@@ -65,5 +65,36 @@ public class InicioPAM {
         InicioPAM pam = new InicioPAM();
         int op;
     
- }
+        do {
+            System.out.println("\n=== MENÚ INICIO PAM ===");
+            System.out.println("1. ReglamentoPoo");
+            System.out.println("2.Lineamientos");
+            System.out.println("3. fechas parciales");
+            System.out.println("4. porcentajes pir parcial");
+            System.out.println("5. salir");
+            
+            op= sc.nextInt();
+            switch(op){
+                case 1:
+                    System.out.println("/n"+ pam.reglamentoPOO());
+                    break;
+                case 2: 
+                     System.out.println("/n"+ pam.lineamientosclassroom());
+                     break;
+                case 3: 
+                    System.out.println("/n"+ pam.fechasparciales());
+                    break;
+                case 4: 
+                     System.out.println("/n"+ pam.porcentajesPorParcial());
+                     break;
+                case 5: 
+                    System.out.println("saliendo...");
+                     default:
+                         System.out.println("opcion no valida");
+                     
+            }
+           }while(op!=5);
 }
+}
+
+
