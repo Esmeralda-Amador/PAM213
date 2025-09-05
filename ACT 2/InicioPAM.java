@@ -46,5 +46,24 @@ public class InicioPAM {
             + " 2. Evidencia de conocimiento(40%), Evidencia de desempeño(20%), Evidencia de producto(20%), Proyecto integrador(20%)\n"
              + " 3. Evidencia de conocimiento(20%), Evidencia de desempeño(10%), Evidencia de producto(40%), Proyecto integrador(30%)\n";
     }
+    public String fechasparciales(){
+        return "fechas parciales\n"
+                +"1. 30-09-2025"
+                +"2. 04-10-2025"
+                +"3. 02-12-2025 "
+                + "08-12-25 ";
+    }
+    public String porcentajesPorParcial() {
+        return "porcentajes por parcial \n"
+             + " 1. 40%,20%,30%,10%\n"
+             + " 2. 40%,20%,20%,20%\n"
+             + " 3. 20%,10%,40%,30%\n";
+    }
     
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        InicioPAM pam = new InicioPAM();
+        int op;
+    
+ }
 }
