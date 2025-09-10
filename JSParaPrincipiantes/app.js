@@ -1,6 +1,3 @@
-let count=1;
-
-while(count<=50){
-    console.log(count);
-    count ++;
-}
+let names=['ryan','joe','john'];
+for(let i =0;i< names.length;i++){
+console.log(names[i]);
