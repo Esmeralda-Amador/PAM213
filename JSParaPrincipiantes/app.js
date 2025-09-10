@@ -1,1 +1,2 @@
-document.write("<h1>Hello word</h1");
+console.log({"username": "Ryan",
+"score:70.4"});
