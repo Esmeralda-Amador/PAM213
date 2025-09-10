@@ -1,2 +1,4 @@
-console.log({"username": "Ryan",
-"score:70.4"});
+let numberOne =60;
+let numberTwo=100;
+let result = numberOne * numberTwo;
+console.log(result);
