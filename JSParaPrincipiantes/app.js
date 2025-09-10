@@ -1,6 +1,6 @@
-let count=50;
+let count=1;
 
-while(count>50){
-    console.log("hello word");
+while(count<=50){
+    console.log(count);
     count ++;
 }
