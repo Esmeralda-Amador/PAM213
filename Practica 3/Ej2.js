@@ -7,7 +7,8 @@ function simularPeticionAPI(){
 }
 async function obtenerDatos(){
      try {
-        const respuesta =await (simularPeticionAPI);
+        const respuesta = await simularPeticionAPI();
+        console.log("Procesando...");
         console.log("Resultado de la petición",respuesta);
      }catch(error){
         console.log("Error", error.message);
