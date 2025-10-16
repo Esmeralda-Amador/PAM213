@@ -1,13 +1,11 @@
-
 import { Text, StyleSheet, View } from 'react-native'
 
-export default function BotonesScreen() {
-
+export default function ButtomSheet() {
     return (
       <View>
-        <Text> Proximamente.... </Text>
+        <Text> Prox.... </Text>
       </View>
     )
-  }
+}
 
 const styles = StyleSheet.create({})
