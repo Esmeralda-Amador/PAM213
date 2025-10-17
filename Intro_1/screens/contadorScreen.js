@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   },
     texto:{
      color: '#ffffffff',
-     fontSize: '50',
+     fontSize: 35,
      fontFamily: 'Times New Roman',
      fontWeight:'bold',
      fontStyle: 'italic',
@@ -45,15 +45,15 @@ const styles = StyleSheet.create({
   },
   texto2:{
      color: '#ffffffff',
-     fontSize: '55',
+     fontSize: 30,
      fontFamily: 'Times New Roman',
-     fontWeight:'400',
+     fontWeight:'700',
      fontStyle: 'normal',
      textDecorationLine: 'underline',
 
   },
   botonesContainer:{
-    marginTop :'20',
+    marginTop :20,
     flexDirection:'row',
     alignItems: 'center', 
     justifyContent: 'center',
