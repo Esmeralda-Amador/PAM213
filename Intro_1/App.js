@@ -3,11 +3,14 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import MenuScreen from './screens/MenuScreen';
 
-//2. Main: Zona de componentes
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+
+//2.-Main: Zona de componentes
 export default function App() {
 
   return (
-  <MenuScreen/>
-
+    <GestureHandlerRootView style={{ flex: 1 }}> 
+      <MenuScreen />
+    </GestureHandlerRootView>
   );
 }
