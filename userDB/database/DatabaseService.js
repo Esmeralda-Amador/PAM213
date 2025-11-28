@@ -65,7 +65,40 @@ class DatabaseService {
       };
     }
   }
+  // ACTUALIZAR (UPDATE)
+  async update(id, nuevoNombre) {
+    if (Platform.OS === 'web') {
+      const usuarios = await this.getAll();
+      // Buscamos el índice del usuario
+      const index = usuarios.findIndex(u => u.id === id);
+      if (index !== -1) {
+        usuarios[index].nombre = nuevoNombre;
+        localStorage.setItem(this.storageKey, JSON.stringify(usuarios));
+      }
+    } else {
+      // SQLite: Ejecutamos el comando UPDATE
+      await this.db.runAsync(
+        'UPDATE usuarios SET nombre = ? WHERE id = ?',
+        nuevoNombre,
+        id
+      );
+    }
+  }
+async delete(id) {
+    if (Platform.OS === 'web') {
+      const usuarios = await this.getAll();
+      const filtrados = usuarios.filter(u => u.id !== id);
+      localStorage.setItem(this.storageKey, JSON.stringify(filtrados));
+      return true;
+    } else {
+      return await this.db.runAsync(
+        'DELETE FROM usuarios WHERE id = ?',
+        [id]
+      );
+    }
+  }
 }
+
 
 // Exportar instancia de la clase 
 export default new DatabaseService();

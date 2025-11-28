@@ -43,6 +43,26 @@ export class UsuarioController {
       throw error;
     }
   }
+  async editarUsuario(id, nuevoNombre) {
+    try {
+      // 1. Validar (usamos la misma validación que al crear)
+      Usuario.validar(nuevoNombre);
+
+      // 2. Llamar al servicio
+      await DatabaseService.update(id, nuevoNombre.trim());
+
+      // 3. Notificar para refrescar la pantalla
+      this.notifyListeners();
+    } catch (error) {
+      console.error('Error al editar:', error);
+      throw error;
+    }
+  }
+
+async eliminarUsuario(id) {
+    await DatabaseService.delete(id);
+    this.notifyListeners();
+  }
 
   // Sistema de observadores para actualizar la vista automáticamente
   addListener(callback) {
